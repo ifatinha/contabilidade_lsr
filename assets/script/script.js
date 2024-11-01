@@ -1,9 +1,11 @@
 import { openMenu, closeMenu } from "./modules/initializeMenu.js";
+import { carouselComments } from "./modules/carouselComments.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const functionsToCall = [
     { name: "openMenu", func: openMenu },
     { name: "closeMenu", func: closeMenu },
+    { name: "carouselComments", func: carouselComments },
   ];
 
   functionsToCall.forEach(({ name, func }) => {

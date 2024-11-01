@@ -8,23 +8,13 @@
 // section about
 .about__process {
     counter-reset: ctr;
-    gap          : 1rem;
-    margin-top   : 4rem;
+    margin-top   : 5rem;
 }
 
 .process__item {
-    padding : 1rem 2rem 1rem 1rem;
     position: relative;
 
-    &-title {
-        @include apply-color("pure-white");
-        font-weight  : 500;
-        font-size    : get-font-size(24);
-        line-height  : 40px;
-        margin-bottom: 3rem;
-        padding-top  : .2rem;
-        position     : relative;
-        padding-left : 3em;
+    .item__title {
 
         &::before {
             @include apply-bg-color("flame-red");
@@ -41,6 +31,203 @@
             text-align       : center;
             top              : -5px;
             width            : 60px;
+        }
+    }
+}
+
+// section services
+
+.services {
+    .section__row {
+        &:nth-child(2) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    .paragraph {
+        margin-bottom: 2rem;
+    }
+
+    .item__title {
+        margin-bottom: 1rem;
+        padding      : 0;
+    }
+}
+
+.service__item {
+    span {
+        @include flex(center, center, 0);
+        @include apply-color("ruby-red");
+        display      : inline-block;
+        height       : 50px;
+        margin-bottom: .4rem;
+        overflow     : hidden;
+        width        : 64px;
+
+        i {
+            font-size: get-font-size(50);
+        }
+    }
+}
+
+//section parceiros
+.works {
+    width: 100%;
+
+    .section__row {
+        &:nth-child(2) {
+            margin-bottom: 3rem;
+
+            @include devices-large-screens {
+                margin-bottom: 5rem;
+            }
+        }
+    }
+
+    .paragraph {
+        margin-bottom: 2rem;
+    }
+}
+
+.clients__list {
+    @include flex(center, center, 1rem);
+    flex-wrap  : wrap;
+    font-weight: 700;
+    width      : 100%;
+
+    @include devices-large-screens {
+        gap: 2rem;
+    }
+
+    li {
+        display: inline-block;
+
+        a {
+            color     : rgba(255, 255, 255, 0.15);
+            font-size : get-font-size(22);
+            transition: all 0.3s ease-in-out;
+
+            @include devices-large-screens {
+                font-size: get-font-size(45);
+            }
+
+            @include hover {
+                @include apply-color("ruby-red");
+            }
+        }
+    }
+}
+
+.comments {
+    margin-top: 7rem;
+    width     : 100%;
+}
+
+.swiper {
+    padding: 3rem 0;
+
+    .swiper-pagination-bullet {
+        @include apply-bg-color("medium-gray");
+    }
+
+    .swiper-pagination-bullet-active {
+        @include apply-bg-color("ruby-red");
+    }
+}
+
+.comment__container {
+    @include flex(center, center, 5rem);
+    flex-direction: column;
+    max-width     : 760px;
+    margin        : 0 auto;
+    text-align    : center;
+
+    p {
+        @include font-secondary();
+        @include apply-color("pure-white");
+        font-size : get-font-size(26);
+        text-align: center;
+    }
+}
+
+.comment__author {
+    @include flex(center, start);
+}
+
+.author__image {
+    border: 50%;
+    height: 62px;
+    width : 62px;
+
+    img {
+        border-radius: 50%;
+        height       : 100%;
+        object-fit   : cover;
+        width        : 100%;
+    }
+}
+
+.author__name {
+    @include apply-color("ruby-red");
+    @include font-secondary();
+    font-size  : get-font-size(18);
+    font-weight: 600;
+}
+
+.author__job {
+    @include apply-color("charcoal-gray");
+    display  : block;
+    font-size: get-font-size(14);
+}
+
+// contact
+.contact {
+    @include apply-bg-color("ruby-red");
+    padding: 80px 2% 64px;
+    width  : 100%;
+
+    @include devices-large-screens {
+        padding-top: 200px;
+    }
+
+    .container {
+        @include flex(center, center);
+        flex-direction: column;
+    }
+
+    h3 {
+        @include font-secondary();
+        font-size     : get-font-size(14);
+        font-weight   : 600;
+        letter-spacing: 3.3px;
+        margin-bottom : 2rem;
+        text-transform: uppercase;
+    }
+
+    p {
+        @include apply-color("pure-white");
+        font-size     : get-font-size(26);
+        font-weight   : 500;
+        letter-spacing: -0.5px;
+        max-width     : 800px;
+        margin        : 0 auto 24px;
+        text-align    : center;
+        width         : 100%;
+
+        @include devices-large-screens {
+            font-size: get-font-size(32);
+        }
+    }
+
+    a {
+        @include apply-color("pure-white");
+        font-weight   : 500;
+        font-size     : get-font-size(36);
+        letter-spacing: -1.1px;
+        text-align    : center;
+
+        @include devices-large-screens {
+            font-size: get-font-size(118);
         }
     }
 }

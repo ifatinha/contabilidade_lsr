@@ -7,15 +7,20 @@
 .section {
     @include apply-bg-color("dark-abyss");
     overflow: hidden;
-    padding : 80px 2%;
+    padding : 140px 2%;
     position: relative;
     width   : 100%;
+
+    @include devices-large-screens {
+        padding-top   : 200px;
+        padding-bottom: 200px;
+    }
 
     &::before {
         background-image: url("../images/dots.svg");
         content         : "";
         display         : block;
-        height          : 100px;
+        height          : 180px;
         left            : 50%;
         opacity         : .25;
         position        : absolute;
@@ -41,7 +46,7 @@
         @include apply-color("steel-mist");
         content       : attr(data-num);
         font-weight   : 600;
-        font-size     : get-font-size(120);
+        font-size     : get-font-size(160);
         letter-spacing: -0.02em;
         line-height   : 1;
         opacity       : .1;
@@ -50,10 +55,12 @@
     h2 {
         @include apply-color("flame-red");
         bottom        : 0;
-        font-size     : get-font-size(18);
-        font-weight   : 600;
+        font-size     : get-font-size(14);
+        font-weight   : 500;
+        margin-bottom : 1rem;
         left          : 1em;
-        letter-spacing: 2px;
+        letter-spacing: 3.3px;
+        line-height   : 24px;
         padding-bottom: 2em;
         position      : absolute;
         text-transform: uppercase;
@@ -63,6 +70,7 @@
 
 .section__row {
     @include grid(1fr);
+    gap: 2rem;
 
     @include devices-large-screens {
         grid-template-columns: 1fr 1fr;
