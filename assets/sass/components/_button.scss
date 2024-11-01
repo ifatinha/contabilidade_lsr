@@ -91,3 +91,22 @@
         }
     }
 }
+
+.button__white {
+    @include apply-bg-color("pure-white");
+    @include apply-color("pure-black");
+    display       : inline-block;
+    font-size     : get-font-size(12);
+    font-weight   : 600;
+    letter-spacing: 6.25px;
+    line-height   : 60px;
+    margin-bottom : 2rem;
+    padding       : 0 28px;
+    text-transform: uppercase;
+    transition    : .5s ease-in-out all;
+
+    @include hover {
+        @include apply-bg-color("deep-black");
+        @include apply-color("pure-white");
+    }
+}

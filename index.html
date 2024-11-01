@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
    <meta charset="UTF-8">
@@ -46,7 +46,7 @@
       rel="stylesheet">
 
    <!-- swiper -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" >
 
    <!-- css -->
    <link rel="stylesheet" href="assets/style/main.css">
@@ -62,7 +62,7 @@
          </div>
 
          <button class="burger__button" type="button" id="navbarOpenButton" aria-label="Abrir Menu"
-            aria-expanded="false" aria-haspopup="menu" aria-controls="navbarMenu">
+            aria-expanded="false" aria-haspopup="menu" aria-controls="headerNav">
             <span class="burger__button-visually">Menu</span>
             <span class="burger__button-bars" id="menuBar" aria-hidden="true"></span>
          </button>
@@ -72,8 +72,7 @@
    <div class="modal" id="modal"></div>
 
    <!-- start header navbar -->
-   <div class="navbar" id="headerNav" role="dialog" , aria-modal="true" , aria-labelledby="navbarTitle"
-      aria-describedby="navbarDescription">
+   <div class="navbar" id="headerNav" role="dialog" aria-modal="true" aria-labelledby="navbarTitle">
       <header class="navbar__header">
          <h2 class="navbar__title" id="navbarTitle">Navegue</h2>
          <button class="navbar__close-button" id="navbarCloseButton" aria-label="Fechar menu">
@@ -387,6 +386,44 @@
          <a href="mailto:ola@lsrcontato.com">ola@lsrcontato.com</a>
       </div>
    </div>
+
+   <!-- footer -->
+   <footer class="footer">
+      <div class="container">
+         <div class="footer__row">
+            <div class="footer__column">
+               <h2>Onde nos Encontrar</h2>
+               <address>
+                  <p>1600 Rua Projetada</p>
+                  <p>Bela Vista, Serra Grande</p>
+                  <p>58955-000 <span>BR</span></p>
+                  <p>+55 (83) 98765-4321</p>
+               </address>
+            </div>
+            <div class="footer__column">
+               <h2>Siga-nos</h2>
+               <ul class="footer__social">
+                  <li>
+                     <a href="#">Facebook</a>
+                  </li>
+                  <li>
+                     <a href="#">Twitter</a>
+                  </li>
+                  <li>
+                     <a href="#">Instagram</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="footer__column footer__block-end">
+               <a href="#" class="button__white">Vamos Conversar</a>
+               <div class="copyright">
+                  <p>Direitos autorais lrs 2024</p>
+                  <p>Desenvolvido por <a href="#">fferreira913</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
 
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script type="module" src="assets/script/script.js"></script>
