@@ -102,7 +102,7 @@
 }
 
 .navbar__title {
-    @include apply-color("deep-lilac");
+    @include apply-color("ruby-red");
     font-weight   : 700;
     font-size     : get-font-size(12);
     line-height   : 1.25;
@@ -112,7 +112,7 @@
     position      : relative;
 
     &::after {
-        @include apply-bg-color("deep-lilac");
+        @include apply-bg-color("ruby-red");
         content : "";
         display : block;
         height  : 1px;
@@ -154,7 +154,7 @@
                 opacity: .6;
 
                 &::before {
-                    @include apply-color("deep-lilac")
+                    @include apply-color("ruby-red");
                 }
             }
 

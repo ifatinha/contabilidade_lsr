@@ -100,6 +100,42 @@ a {
   text-decoration: none;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .burger__button {
   align-items: center;
   display: flex;
@@ -111,6 +147,7 @@ a {
   min-height: 52px;
   min-width: 44px;
   transition: 0.5s ease-in-out;
+  animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .burger__button:hover {
   opacity: 0.5;
@@ -278,7 +315,7 @@ a {
 }
 
 .navbar__title {
-  color: #793ea5;
+  color: #d9083c;
   font-weight: 700;
   font-size: 0.75rem;
   line-height: 1.25;
@@ -288,7 +325,7 @@ a {
   position: relative;
 }
 .navbar__title::after {
-  background-color: #793ea5;
+  background-color: #d9083c;
   content: "";
   display: block;
   height: 1px;
@@ -341,7 +378,7 @@ a {
   opacity: 0.6;
 }
 .navbar__content li a:hover::before {
-  color: #793ea5;
+  color: #d9083c;
 }
 .navbar__content li a::before {
   font-family: "Montserrat", sans-serif;
@@ -376,20 +413,24 @@ a {
 }
 
 .header {
-  align-items: center;
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
   padding: 1rem 2%;
   position: absolute;
   width: 100%;
   z-index: 997;
 }
+.header .container {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
 .header__brand {
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: bold;
+  animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .header__brand span {
   color: #d9083c;
@@ -397,22 +438,32 @@ a {
 }
 
 .home {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/hero-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  align-items: end;
+  align-items: start;
   display: flex;
-  gap: 0;
-  justify-content: center;
+  gap: 2rem;
+  justify-content: end;
+  flex-direction: column;
   height: 100vh;
   overflow: hidden;
   position: relative;
-  padding: 0 2%;
+  padding: 0 2% 3rem;
   width: 100%;
 }
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  .home {
+    padding-bottom: 1rem;
+  }
+}
 .home .container {
-  padding-bottom: 5rem;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: both;
+  animation-delay: 1s;
 }
 .home h1 {
   color: #d9083c;
@@ -475,20 +526,51 @@ a {
 @media screen and (min-width: 1920px) {
   .home p {
     font-size: 2.25rem;
-    margin-left: 80px;
+    margin-left: 100px;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
   .home p {
     font-size: 2.25rem;
-    margin-left: 80px;
+    margin-left: 100px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
   .home p {
     font-size: 2.25rem;
-    margin-left: 80px;
+    margin-left: 100px;
   }
+}
+
+.home__content-social {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  margin-top: 3rem;
+}
+@media screen and (min-width: 1920px) {
+  .home__content-social {
+    margin-left: 100px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
+  .home__content-social {
+    margin-left: 100px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
+  .home__content-social {
+    margin-left: 100px;
+  }
+}
+.home__content-social a {
+  color: #ffffff;
+  font-size: 1.125rem;
+  transition: 0.5s all ease-in-out;
+}
+.home__content-social a:hover {
+  color: #d9083c;
 }
 
 /*# sourceMappingURL=main.css.map */

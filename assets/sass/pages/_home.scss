@@ -2,18 +2,24 @@
 @use "../base/typography"as *;
 @use "../base/mixins"as *;
 @use "../global/responsive"as *;
+@use "../global/animations"as *;
 
 .home {
-    @include bg-gradient(linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), "../images/hero-bg.jpg");
-    @include flex(end, center, 0);
-    height  : 100vh;
-    overflow: hidden;
-    position: relative;
-    padding : 0 2%;
-    width   : 100%;
+    @include bg-gradient(linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), "../images/hero-bg.jpg");
+    @include flex(start, end, 2rem);
+    flex-direction: column;
+    height        : 100vh;
+    overflow      : hidden;
+    position      : relative;
+    padding       : 0 2% 3rem;
+    width         : 100%;
+
+    @include mobile-landscape {
+        padding-bottom: 1rem;
+    }
 
     .container {
-        padding-bottom: 5rem;
+        @include fadeIn();
     }
 
     h1 {
@@ -64,7 +70,26 @@
 
         @include devices-large-screens {
             font-size  : get-font-size(36);
-            margin-left: 80px;
+            margin-left: 100px;
+        }
+    }
+}
+
+.home__content-social {
+    @include flex(center, start);
+    margin-top: 3rem;
+
+    @include devices-large-screens {
+        margin-left: 100px;
+    }
+
+    a {
+        @include apply-color("pure-white");
+        font-size : get-font-size(18);
+        transition: .5s all ease-in-out;
+
+        @include hover {
+            @include apply-color("ruby-red");
         }
     }
 }

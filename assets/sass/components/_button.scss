@@ -2,6 +2,7 @@
 @use "../base/mixins"as *;
 @use "../base/typography"as *;
 @use "../global/responsive"as *;
+@use "../global/animations"as *;
 
 .burger__button {
     @include flex(center, center, 8px);
@@ -11,6 +12,7 @@
     min-height: 52px;
     min-width : 44px;
     transition: .5s ease-in-out;
+    @include slide-in-right();
 
     @include hover {
         opacity: .5;
