@@ -19,7 +19,7 @@
     }
 
     .container {
-        @include fadeIn();
+        @include fadeIn(1s);
     }
 
     h1 {
@@ -88,8 +88,13 @@
         font-size : get-font-size(18);
         transition: .5s all ease-in-out;
 
-        @include hover {
-            @include apply-color("ruby-red");
+        i {
+            transition: .5s all ease-in-out;
+
+            @include hover {
+                @include apply-color("ruby-red");
+                transform: scale(1.2);
+            }
         }
     }
 }

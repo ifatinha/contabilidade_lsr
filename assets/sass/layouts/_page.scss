@@ -1,0 +1,46 @@
+@use "../base/colors"as *;
+@use "../base/typography"as *;
+@use "../base/mixins"as *;
+@use "../global/animations"as *;
+@use "../global/responsive"as *;
+
+
+// section about
+.about__process {
+    counter-reset: ctr;
+    gap          : 1rem;
+    margin-top   : 4rem;
+}
+
+.process__item {
+    padding : 1rem 2rem 1rem 1rem;
+    position: relative;
+
+    &-title {
+        @include apply-color("pure-white");
+        font-weight  : 500;
+        font-size    : get-font-size(24);
+        line-height  : 40px;
+        margin-bottom: 3rem;
+        padding-top  : .2rem;
+        position     : relative;
+        padding-left : 3em;
+
+        &::before {
+            @include apply-bg-color("flame-red");
+            @include flex(center, center, 0);
+            color            : currentColor;
+            content          : counter(ctr);
+            counter-increment: ctr;
+            border-radius    : 50%;
+            font-size        : get-font-size(18);
+            font-weight      : 600;
+            height           : 60px;
+            left             : 0;
+            position         : absolute;
+            text-align       : center;
+            top              : -5px;
+            width            : 60px;
+        }
+    }
+}

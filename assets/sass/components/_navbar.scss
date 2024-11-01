@@ -2,6 +2,7 @@
 @use "../base/colors"as *;
 @use "../base/typography"as *;
 @use "../global/responsive"as *;
+@use "../global/animations"as *;
 
 .navbar {
     @include apply-color("pure-white");
@@ -134,7 +135,6 @@
 .navbar__content {
     @include font-primary();
     counter-reset: ctr;
-
 
     li {
         padding: .9rem 0;

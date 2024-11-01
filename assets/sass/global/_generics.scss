@@ -1,0 +1,14 @@
+@use "../base/colors"as *;
+@use "../base/typography"as *;
+@use "responsive"as *;
+
+.paragraph {
+    @include apply-color("steel-mist");
+    @include font-secondary();
+    font-weight: 400;
+    font-size  : get-font-size(18);
+
+    @include devices(xxl) {
+        font-size: get-font-size(22);
+    }
+}

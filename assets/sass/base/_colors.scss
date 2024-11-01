@@ -1,11 +1,14 @@
 @use "sass:map";
 
 $theme-color: (
+    dark-abyss: #14171b,
     deep-black: #0C0C0C,
     deep-lilac: #793ea5,
+    flame-red: hsla(345, 93%, 44%, 1),
     pure-black: #000000,
     pure-white: #ffffff,
-    ruby-red: #d9083c 
+    ruby-red: #d9083c,
+    steel-mist: #6c737d
 );
 
 @mixin apply-color($key) {

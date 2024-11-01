@@ -14,12 +14,12 @@
     }
 }
 
-@mixin fadeIn() {
+@mixin fadeIn($delay) {
     animation-name           : fadeIn;
     animation-duration       : 3s;
     animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
     animation-fill-mode      : both;
-    animation-delay          : 1s;
+    animation-delay          : $delay;
 }
 
 @keyframes slide-in-right {
