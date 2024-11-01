@@ -1,0 +1,70 @@
+@use "../base/colors"as *;
+@use "../base/typography"as *;
+@use "../base/mixins"as *;
+@use "../global/responsive"as *;
+
+.home {
+    @include bg-gradient(linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), "../images/hero-bg.jpg");
+    @include flex(end, center, 0);
+    height  : 100vh;
+    overflow: hidden;
+    position: relative;
+    padding : 0 2%;
+    width   : 100%;
+
+    .container {
+        padding-bottom: 5rem;
+    }
+
+    h1 {
+        @include apply-color("ruby-red");
+        font-size     : 28vw;
+        font-weight   : 600;
+        letter-spacing: -0.4rem;
+        line-height   : 1;
+        position      : relative;
+
+        @include devices-large-screens {
+            font-size: get-font-size(220);
+        }
+
+        &::before {
+            background-image: url("../images/dots.svg");
+            bottom          : .14em;
+            content         : "";
+            display         : block;
+            height          : 10rem;
+            opacity         : .25;
+            position        : absolute;
+            transform       : translateX(-4rem);
+            right           : 100%;
+            width           : 20rem;
+
+            @include devices(t) {
+                bottom   : .8em;
+                left     : -1.2rem;
+                transform: translateX(0);
+            }
+
+            @include devices(m) {
+                left: -8rem;
+            }
+
+            @include devices(xs) {
+                left: -8rem;
+            }
+        }
+    }
+
+    p {
+        @include apply-color("pure-white");
+        font-size: get-font-size(18);
+        max-width: 650px;
+        width    : 100%;
+
+        @include devices-large-screens {
+            font-size  : get-font-size(36);
+            margin-left: 80px;
+        }
+    }
+}

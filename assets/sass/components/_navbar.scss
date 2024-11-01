@@ -1,0 +1,173 @@
+@use "../base/mixins"as *;
+@use "../base/colors"as *;
+@use "../base/typography"as *;
+@use "../global/responsive"as *;
+
+.navbar {
+    @include apply-color("pure-white");
+    @include apply-bg-color("deep-black");
+    height    : 100%;
+    overflow-y: auto;
+    opacity   : 1;
+    padding   : 2rem 2.6rem;
+    position  : fixed;
+    right     : 0;
+    transform : translateX(600px);
+    transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+    top       : 0;
+    visibility: hidden;
+    width     : 600px;
+    z-index   : 999;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    @include devices(m) {
+
+        width: 320px;
+    }
+
+    @include devices(xs) {
+        padding: 1rem;
+        width  : 320px;
+    }
+
+    @include mobile-landscape {
+        padding: 1rem;
+    }
+
+    &__close-button {
+        @include font-primary();
+        @include flex(center, center, 12px);
+        @include apply-color("pure-white");
+        background    : transparent;
+        border        : transparent;
+        cursor        : pointer;
+        font-size     : get-font-size(12);
+        font-weight   : 600;
+        min-height    : 50px;
+        min-width     : 50px;
+        position      : relative;
+        transition    : .5s ease-in-out;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+
+        @include hover {
+            opacity: .5;
+
+            &::after {
+                transform: rotate(225deg);
+            }
+
+            &::before {
+                transform: rotate(135deg);
+            }
+        }
+
+        &::after,
+        &::before {
+            background: currentColor;
+            content   : "";
+            height    : 2px;
+            position  : absolute;
+            right     : 2px;
+            transition: .6s ease-in-out;
+            width     : 22px;
+        }
+
+        &::after {
+            transform: rotate(45deg);
+
+            @include hover {
+                transform: translate(-50%, -50%) rotate(225deg);
+            }
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.navibar__activated {
+    opacity   : 1;
+    transform : translateY(0);
+    visibility: visible;
+}
+
+.navbar__header {
+    @include flex(center, space-between);
+    margin-bottom: 4rem;
+}
+
+.navbar__title {
+    @include apply-color("deep-lilac");
+    font-weight   : 700;
+    font-size     : get-font-size(12);
+    line-height   : 1.25;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    left          : 0;
+    position      : relative;
+
+    &::after {
+        @include apply-bg-color("deep-lilac");
+        content : "";
+        display : block;
+        height  : 1px;
+        position: absolute;
+        right   : -120px;
+        top     : 50%;
+        width   : 100px;
+
+        @include devices(m) {
+            display: none;
+        }
+
+        @include devices(xs) {
+            display: none;
+        }
+    }
+}
+
+.navbar__content {
+    @include font-primary();
+    counter-reset: ctr;
+
+
+    li {
+        padding: .9rem 0;
+
+        a {
+            display    : block;
+            font-size  : get-font-size(30);
+            font-weight: 600;
+            position   : relative;
+            transition : .5s ease-in-out all;
+
+            @include devices-large-screens {
+                font-size: get-font-size(40);
+            }
+
+            @include hover {
+                opacity: .6;
+
+                &::before {
+                    @include apply-color("deep-lilac")
+                }
+            }
+
+            &::before {
+                @include font-primary();
+                content          : counter(ctr, decimal-leading-zero) ".";
+                color            : rgba($color: #ffffff, $alpha: 0.25);
+                counter-increment: ctr;
+                display          : block;
+                font-size        : get-font-size(12);
+                position         : relative;
+                transition       : .5s ease-in-out all;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@use "../base/colors"as *;
+@use "../base/typography"as *;
+@use "../base/mixins"as *;
+@use "../global/responsive"as *;
+
+.modal {
+    background: rgba($color: #000000, $alpha: 0.8);
+    height    : 100%;
+    inset     : 0;
+    position  : fixed;
+    transition: .5s cubic-bezier(.645, .045, .355, 1) ease-in-out;
+    width     : 100%;
+    visibility: hidden;
+    z-index   : 998;
+}
+
+.js-open-modal {
+    opacity   : 1;
+    visibility: visible;
+}
