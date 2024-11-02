@@ -1,11 +1,15 @@
 import { openMenu, closeMenu } from "./modules/initializeMenu.js";
 import { carouselComments } from "./modules/carouselComments.js";
+import { toTop } from "./modules/toTop.js";
+import { animations } from "./modules/animations.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const functionsToCall = [
     { name: "openMenu", func: openMenu },
     { name: "closeMenu", func: closeMenu },
     { name: "carouselComments", func: carouselComments },
+    { name: "toTop", func: toTop },
+    { name: "animations", func: animations },
   ];
 
   functionsToCall.forEach(({ name, func }) => {

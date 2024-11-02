@@ -228,7 +228,7 @@
         transition    : .5s ease-in-out;
 
         @include devices-large-screens {
-            font-size: get-font-size(118);
+            font-size: get-font-size(100);
         }
 
         @include hover {

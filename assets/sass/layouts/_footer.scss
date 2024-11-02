@@ -5,11 +5,13 @@
 
 .footer {
     @include apply-bg-color("ruby-red");
-    padding: 64px 2% 128px;
+    overflow: hidden;
+    padding : 64px 2% 128px;
 }
 
 .footer__row {
     @include grid(1fr);
+    gap: 2rem;
 
     @include devices-large-screens {
         grid-template-columns: repeat(3, 1fr);
@@ -21,7 +23,7 @@
 }
 
 .footer__column {
-    padding: 0 1.5rem;
+    padding   : 0 1.5rem;
 
     h2 {
         @include font-secondary();

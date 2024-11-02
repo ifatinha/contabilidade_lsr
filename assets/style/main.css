@@ -220,6 +220,34 @@ a {
   color: #ffffff;
 }
 
+.button__round {
+  font-family: "Nunito Sans", sans-serif;
+  align-items: center;
+  display: flex;
+  gap: 0px;
+  justify-content: center;
+  background-color: #0C0C0C;
+  color: #ffffff;
+  bottom: 4rem;
+  border-radius: 50%;
+  font-size: 1.125rem;
+  height: 64px;
+  opacity: 0;
+  position: fixed;
+  right: 4rem;
+  transform: scale(0);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  visibility: hidden;
+  width: 64px;
+  z-index: 999999;
+}
+
+.burger__button-visible {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
 .modal {
   background: rgba(0, 0, 0, 0.8);
   height: 100%;
@@ -458,12 +486,14 @@ a {
 
 .footer {
   background-color: #d9083c;
+  overflow: hidden;
   padding: 64px 2% 128px;
 }
 
 .footer__row {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 2rem;
 }
 @media screen and (min-width: 1920px) {
   .footer__row {
@@ -988,17 +1018,17 @@ a {
 }
 @media screen and (min-width: 1920px) {
   .contact a {
-    font-size: 7.375rem;
+    font-size: 6.25rem;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: calc(1920px - 1px)) {
   .contact a {
-    font-size: 7.375rem;
+    font-size: 6.25rem;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: calc(1440px - 1px)) {
   .contact a {
-    font-size: 7.375rem;
+    font-size: 6.25rem;
   }
 }
 .contact a:hover {

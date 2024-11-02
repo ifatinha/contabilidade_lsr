@@ -46,7 +46,10 @@
       rel="stylesheet">
 
    <!-- swiper -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" >
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+   <!-- aos animaiton -->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
    <!-- css -->
    <link rel="stylesheet" href="assets/style/main.css">
@@ -104,6 +107,9 @@
    </div>
    <!-- end header navbar -->
 
+   <!-- button to top -->
+   <a href="#home" class="button__round" id="scrollToTopButton">Inicio</a>
+
    <!-- main -->
    <main>
       <!-- section hero -->
@@ -144,12 +150,14 @@
 
       <section class="section" id="about">
          <div class="container">
-            <div class="section__title" data-num="01">
+            <div class="section__title" data-num="01" data-aos="fade-down" data-aos-duration="1000"
+               data-aos-easing="ease-in-sine">
                <h2>Quem Somos</h2>
             </div>
 
             <div class="section__row">
-               <div class="section__column">
+               <div class="section__column" data-aos="fade-right" data-aos-duration="1200"
+                  data-aos-easing="ease-in-sine">
                   <h3>Na LSR, acreditamos que a contabilidade pode ser descomplicada e estratégica.</h3>
                   <p class="paragraph">
                      Na LSR, somos mais do que uma empresa de contabilidade. Nossa missão é tornar a gestão financeira
@@ -158,14 +166,16 @@
                      para focar no que realmente importa: o crescimento do seu negócio.
                   </p>
                </div>
-               <div class="section__column">
+               <div class="section__column" data-aos="fade-left" data-aos-duration="1400"
+                  data-aos-easing="ease-in-sine">
                   <img src="assets/images/about-bg.jpg" alt="Imagem de um escritório de contabilidade" width="2400"
                      height="1600">
                </div>
             </div>
 
             <div class="section__row about__process">
-               <div class="item process__item">
+               <div class="item process__item" data-aos="fade-up" data-aos-duration="1500"
+                  data-aos-easing="ease-in-sine">
                   <h3 class="item__title">Diagnóstico</h3>
                   <p class="paragraph">
                      Realizamos uma análise detalhada da sua situação financeira, identificando necessidades e
@@ -173,7 +183,8 @@
                      pontos fortes e as áreas a serem melhoradas, formando uma base sólida para as próximas etapas.
                   </p>
                </div>
-               <div class="item process__item">
+               <div class="item process__item" data-aos="fade-up" data-aos-duration="1700"
+                  data-aos-easing="ease-in-sine">
                   <h3 class="item__title">Planejamento</h3>
                   <p class="paragraph">
                      Com base no diagnóstico, desenvolvemos um plano personalizado com estratégias fiscais e contábeis
@@ -181,7 +192,8 @@
                      sustentável, alinhando cada ação às metas de curto e longo prazo do seu negócio.
                   </p>
                </div>
-               <div class="item process__item">
+               <div class="item process__item" data-aos="fade-up" data-aos-duration="1900"
+                  data-aos-easing="ease-in-sine">
                   <h3 class="item__title">Implementação</h3>
                   <p class="paragraph">
                      Executamos as estratégias planejadas com atenção, cuidando da parte contábil e fiscal da sua
@@ -190,7 +202,8 @@
                      eficiência e transparência.
                   </p>
                </div>
-               <div class="item process__item">
+               <div class="item process__item" data-aos="fade-up" data-aos-duration="2100"
+                  data-aos-easing="ease-in-sine">
                   <h3 class="item__title">Acompanhamento</h3>
                   <p class="paragraph">
                      Monitoramos continuamente os resultados financeiros, analisando indicadores e relatórios regulares.
@@ -204,15 +217,18 @@
 
       <section class="section services" id="services">
          <div class="container">
-            <div class="section__title" data-num="02">
+            <div class="section__title" data-num="02" data-aos="fade-down" data-aos-duration="1000"
+               data-aos-easing="ease-in-sine">
                <h2>O que fazemos </h2>
             </div>
 
             <div class="section__row">
-               <div class="section__column">
+               <div class="section__column" data-aos="fade-right" data-aos-duration="1200"
+                  data-aos-easing="ease-in-sine">
                   <h3>Experiência que Transforma Resultados.</h3>
                </div>
-               <div class="section__column">
+               <div class="section__column" data-aos="fade-left" data-aos-duration="1400"
+                  data-aos-easing="ease-in-sine">
                   <p class="paragraph">Na LRS Contábil, transformamos desafios financeiros em soluções estratégicas que
                      impulsionam o crescimento dos nossos clientes. Com anos de experiência no mercado, sabemos que cada
                      número conta, e é por isso que oferecemos um atendimento personalizado, focado em resultados e na
@@ -228,42 +244,48 @@
             </div>
 
             <div class="section__row">
-               <div class="item service__item">
+               <div class="item service__item" data-aos="fade-up" data-aos-duration="1500"
+                  data-aos-easing="ease-in-sine">
                   <span><i class="fa-solid fa-scale-balanced"></i></span>
                   <h3 class="item__title">Consultoria Tributária</h3>
                   <p class="paragraph">Nossa equipe especialista analisa cuidadosamente as obrigações fiscais da sua
                      empresa, buscando sempre otimizar os tributos de forma estratégica e dentro da legalidade. Com um
                      planejamento tributário eficaz, ajudamos você a reduzir custos e a maximizar os resultados.</p>
                </div>
-               <div class="item service__item">
+               <div class="item service__item" data-aos="fade-up" data-aos-duration="1700"
+                  data-aos-easing="ease-in-sine">
                   <span><i class="fa-solid fa-users"></i></span>
                   <h3 class="item__title">Gestão de Folha de Pagamento</h3>
                   <p class="paragraph">Oferecemos um serviço completo de gestão de folha de pagamento, assegurando que
                      todos os processos, desde o cálculo até o pagamento de impostos trabalhistas, sejam realizados com
                      precisão e dentro dos prazos, garantindo a satisfação dos colaboradores e a conformidade legal.</p>
                </div>
-               <div class="item service__item">
+               <div class="item service__item" data-aos="fade-up" data-aos-duration="1800"
+                  data-aos-easing="ease-in-sine">
                   <span><i class="fa-solid fa-chart-line"></i></span>
                   <h3 class="item__title">Contabilidade Financeira</h3>
                   <p class="paragraph">Com nossa expertise em contabilidade financeira, você obtém relatórios claros e
                      detalhados que apoiam na tomada de decisões estratégicas para o crescimento da sua empresa.
                      Transformamos dados contábeis em informações valiosas para o seu sucesso.</p>
                </div>
-               <div class="item service__item">
+               <div class="item service__item" data-aos="fade-up" data-aos-duration="2100"
+                  data-aos-easing="ease-in-sine">
                   <span><i class="fa-solid fa-coins"></i></span>
                   <h3 class="item__title">Análise de Custos e Rentabilidade</h3>
                   <p class="paragraph">Realizamos uma análise minuciosa dos custos e da rentabilidade do seu negócio,
                      ajudando você a identificar oportunidades de economia e a otimizar os lucros. Com dados precisos,
                      fica mais fácil planejar o futuro e aumentar a competitividade no mercado.</p>
                </div>
-               <div class="item service__item">
+               <div class="item service__item" data-aos="fade-up" data-aos-duration="2300"
+                  data-aos-easing="ease-in-sine">
                   <span><i class="fa-solid fa-laptop"></i></span>
                   <h3 class="item__title">Contabilidade Digital</h3>
                   <p class="paragraph">Adotamos as melhores ferramentas digitais para tornar o processo contábil mais
                      ágil e acessível. Com nossa contabilidade digital, você tem acesso rápido e seguro às informações
                      financeiras da sua empresa, sempre à distância de um clique.</p>
                </div>
-               <div class="item service__item">
+               <div class="item service__item" data-aos="fade-up" data-aos-duration="2500"
+                  data-aos-easing="ease-in-sine">
                   <span><i class="fa-solid fa-briefcase"></i></span>
                   <h3 class="item__title">Abertura e Regularização de Empresas</h3>
                   <p class="paragraph">Apoiamos empreendedores em todas as etapas da abertura e regularização de
@@ -276,15 +298,18 @@
 
       <section class="section works" id="works">
          <div class="container">
-            <div class="section__title" data-num="03">
+            <div class="section__title" data-num="03" data-aos="fade-down" data-aos-duration="1000"
+               data-aos-easing="ease-in-sine">
                <h2>Nossos Clientes</h2>
             </div>
 
             <div class="section__row">
-               <div class="section__column">
+               <div class="section__column" data-aos="fade-right" data-aos-duration="1200"
+                  data-aos-easing="ease-in-sine">
                   <h3>Nossos Clientes: O Motivo de Nossa Dedicação</h3>
                </div>
-               <div class="section__column">
+               <div class="section__column" data-aos="fade-left" data-aos-duration="1400"
+                  data-aos-easing="ease-in-sine">
                   <p class="paragraph">Temos o orgulho de atender uma variedade de clientes que refletem a diversidade e
                      a vitalidade do mercado. Desde pequenas e médias empresas até grandes corporações, nossa abordagem
                      personalizada nos permite compreender as necessidades específicas de cada cliente e oferecer
@@ -298,7 +323,7 @@
                </div>
             </div>
 
-            <ul class="clients__list">
+            <ul class="clients__list" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-sine">
                <li><a href="#">Uber</a></li>
                <li><a href="#">Spotify</a></li>
                <li><a href="#">Google</a></li>
@@ -315,8 +340,8 @@
                <li><a href="#">Amazon</a></li>
             </ul>
 
-            <div class="comments">
-               <div class="swiper comment__swiper">
+            <div class="comments" data-aos="fade-up" data-aos-duration="3000">
+               <div class=" swiper comment__swiper">
                   <div class="swiper-wrapper">
                      <div class="swiper-slide">
                         <div class="comment__container">
@@ -379,7 +404,7 @@
 
    <!-- contact -->
    <div class="contact" id="contact">
-      <div class="container">
+      <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
          <h3>Entre em Contato</h3>
          <p>Tem uma ideia ou quer melhorar a contabilidade do seu negócio? Fale conosco. Vamos trabalhar juntos para
             alcançar ótimos resultados. Envie-nos uma mensagem.</p>
@@ -391,7 +416,7 @@
    <footer class="footer">
       <div class="container">
          <div class="footer__row">
-            <div class="footer__column">
+            <div class="footer__column" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
                <h2>Onde nos Encontrar</h2>
                <address>
                   <p>1600 Rua Projetada</p>
@@ -400,7 +425,7 @@
                   <p>+55 (83) 98765-4321</p>
                </address>
             </div>
-            <div class="footer__column">
+            <div class="footer__column" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1600">
                <h2>Siga-nos</h2>
                <ul class="footer__social">
                   <li>
@@ -414,7 +439,8 @@
                   </li>
                </ul>
             </div>
-            <div class="footer__column footer__block-end">
+            <div class="footer__column footer__block-end" data-aos="fade-up" data-aos-easing="linear"
+               data-aos-duration="1700">
                <a href="#" class="button__white">Vamos Conversar</a>
                <div class="copyright">
                   <p>Direitos autorais lrs 2024</p>
@@ -425,6 +451,7 @@
       </div>
    </footer>
 
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script type="module" src="assets/script/script.js"></script>
    <script src="https://kit.fontawesome.com/4980d49b51.js" crossorigin="anonymous"></script>
