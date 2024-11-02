@@ -61,7 +61,7 @@ Para publicar a página online, você pode hospedar o projeto no GitHub Pages ou
 1. Faça login no GitHub e acesse o repositório.
 2. Vá para Settings > Pages.
 3. Em "Source", selecione a branch principal (geralmente main ou master) e clique em "Save".
-4. A página estará disponível em https://github.com/ifatinha/contabilidade_lsr.git.
+4. A página estará disponível em [https://github.com/ifatinha/contabilidade_lsr.git](https://ifatinha.github.io/contabilidade_lsr/).
 
 ## 📞 Contato
 Para mais informações sobre o projeto ou sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um e-mail para contato@lsrcontabil.com.
